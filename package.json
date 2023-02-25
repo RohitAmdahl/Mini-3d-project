@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "sass src/scss:dist/css"
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
   "homepage": "https://github.com/RohitAmdahl/Mini-3d-project#readme",
   "devDependencies": {
     "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "three": "^0.150.0"
   }
 }
