@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "sass src/scss:dist/css",
-    "watch": "sass --watch src/scss:dist/css"
+    "watch": "sass --watch src/scss:dist/css",
+    "lint": "eslint js/*.js",
+    "lint-fix": "eslint js/*.js --cache --fix"
   },
   "repository": {
     "type": "git",
