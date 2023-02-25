@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/RohitAmdahl/Mini-3d-project#readme",
   "devDependencies": {
+    "eslint": "^8.34.0",
     "sass": "^1.58.3"
   },
   "dependencies": {
