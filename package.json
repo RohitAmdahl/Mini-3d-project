@@ -1,6 +1,6 @@
 {
   "name": "mini-3d-project",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "three.js-3d_project",
   "main": "index.js",
   "type": "module",
