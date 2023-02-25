@@ -1,0 +1,25 @@
+{
+  "name": "mini-3d-project",
+  "version": "0.0.1",
+  "description": "three.js-3d_project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohitAmdahl/Mini-3d-project.git"
+  },
+  "keywords": [
+    "js",
+    "threee.js",
+    "sass"
+  ],
+  "author": "rohit Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RohitAmdahl/Mini-3d-project/issues"
+  },
+  "homepage": "https://github.com/RohitAmdahl/Mini-3d-project#readme"
+}
