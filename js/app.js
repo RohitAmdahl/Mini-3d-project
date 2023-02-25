@@ -1,5 +1,5 @@
 // // // Import the entire three.js core library.
-// // import * as THREE from "three";
+
 import * as THREE from "https://unpkg.com/three/build/three.module.js";
 
 const scene = new THREE.Scene();
@@ -31,3 +31,4 @@ function animate() {
 }
 
 animate();
+// renderer.render(scene, camera);
