@@ -1,3 +1,4 @@
+// Import the entire three.js core library.
 import * as THREE from "three";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
