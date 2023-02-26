@@ -18,7 +18,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-//------------------orbit control
+//-----------------------------------------------------orbit control
 // const orbit = new OrbitControls(camera, renderer, domElement);
 // orbit.update();
 
@@ -32,6 +32,22 @@ const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
 const boxMaterial = new THREE.MeshBasicMaterial({ color: "#0085FF" });
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
+//-create plane grids----------------
+const geometry = new THREE.PlaneGeometry(5, 5);
+const material = new THREE.MeshBasicMaterial({
+  color: "#373737",
+});
+const plane = new THREE.Mesh(geometry, material);
+scene.add(plane);
+
+const size = 25;
+const divisions = 25;
+
+const gridHelper = new THREE.GridHelper(size, divisions);
+scene.add(gridHelper);
+plane.rotation.x = -0.5 * Math.PI;
+// const gridsHelper = new THREE.GridsHelper(35);
+// scene.add(gridsHelper);
 
 function animate() {
   requestAnimationFrame(animate);
