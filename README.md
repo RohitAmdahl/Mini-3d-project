@@ -8,3 +8,6 @@ First project with three.js, i m looking forward to show and see my final result
 - Sass /scss
 - Html
 - three.js
+
+## Contribute 
+fork repo and create pull request / create branch 
