@@ -67,9 +67,8 @@ function animate() {
 
   box.rotation.x += 0.01;
   box.rotation.y += 0.01;
-
+  box.rotation.z += 0.02;
   torus.rotation.x += 0.01;
-  torus.rotation.y += 0.01;
 
   renderer.render(scene, camera);
 }
