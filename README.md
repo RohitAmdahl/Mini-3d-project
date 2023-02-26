@@ -10,4 +10,4 @@ First project with three.js, i m looking forward to show and see my final result
 - three.js
 
 ## Contribute 
-fork repo and create pull request / create branch 
+fork repo / create pull request / create branch 
