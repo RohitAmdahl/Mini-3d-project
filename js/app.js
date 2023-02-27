@@ -55,7 +55,6 @@ const gridHelper = new THREE.GridHelper(size, divisions);
 plane.rotation.x = -0.5 * Math.PI;
 scene.add(gridHelper);
 // //-----------------------------------------------------orbit control
-// render
 
 // const orbit = new OrbitControls(camera, renderer, domElement);
 // orbit.update();
