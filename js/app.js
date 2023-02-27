@@ -10,7 +10,7 @@ import * as THREE from "https://unpkg.com/three/build/three.module.js";
 //-------------------importing from node modules but getting type error
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#E7E6E6");
+scene.background = new THREE.Color("#373737");
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -34,7 +34,7 @@ const vMaterial = new THREE.MeshBasicMaterial({ color: "#FEBFC8" });
 const torus = new THREE.Mesh(aGeometry, vMaterial);
 scene.add(torus);
 
-const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+const boxGeometry = new THREE.BoxGeometry(1, 0.5, 0.5);
 const boxMaterial = new THREE.MeshBasicMaterial({ color: "#FCB500" });
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
@@ -61,12 +61,21 @@ scene.add(gridHelper);
 // orbit.update();
 
 // //-----------------------------------------------------
+//---light--------------------------------------------------
+// const light = new THREE.AmbientLight("#FFFFFF", 0.5); // soft white light
+// scene.add(light);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(0, 2, 2);
+const Helper = new THREE.DirectionalLightHelper(directionalLight, 5);
+scene.add(directionalLight, Helper);
+
+//--function animate
 function animate() {
   requestAnimationFrame(animate);
 
-  box.rotation.x += 0.01;
+  // box.rotation.x += 0.01;
+  // box.rotation.z += 0.02;
   box.rotation.y += 0.01;
-  box.rotation.z += 0.02;
   torus.rotation.x += 0.01;
 
   renderer.render(scene, camera);
