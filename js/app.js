@@ -9,7 +9,7 @@ import * as THREE from "https://unpkg.com/three/build/three.module.js";
 // import * as THREE from "../node_modules/three/build/three.js";
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#F9F7F7");
+scene.background = new THREE.Color("#E7E6E6");
 //--------------------------------------orbit control trying to get it but getting error type error
 
 //--------------------------------------orbit control trying to get it but getting error
