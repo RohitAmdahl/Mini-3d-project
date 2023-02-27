@@ -2,17 +2,16 @@
 
 import * as THREE from "https://unpkg.com/three/build/three.module.js";
 
+//--------------------------------------orbit control trying to get it but getting error type error
+// import * as THREE from "../node_modules/three/build/three.js";
 //import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
 //import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-
+//--------------------------------------orbit control trying to get it but getting error
 //-------------------importing from node modules but getting type error
-// import * as THREE from "../node_modules/three/build/three.js";
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#E7E6E6");
-//--------------------------------------orbit control trying to get it but getting error type error
 
-//--------------------------------------orbit control trying to get it but getting error
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
