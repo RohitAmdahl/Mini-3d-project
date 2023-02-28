@@ -10,7 +10,7 @@ import { OrbitControls } from "https://unpkg.com/three@0.112/examples/jsm/contro
 //-------------------importing from node modules but getting type error
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("#373737");
+scene.background = new THREE.Color("#000000");
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -34,16 +34,21 @@ const vMaterial = new THREE.MeshBasicMaterial({ color: "#FEBFC8" });
 const torus = new THREE.Mesh(aGeometry, vMaterial);
 scene.add(torus);
 
-const boxGeometry = new THREE.BoxGeometry(1, 0.5, 0.5);
-const boxMaterial = new THREE.MeshBasicMaterial({ color: "#FCB500" });
+const boxGeometry = new THREE.SphereGeometry(0.6, 12, 9);
+const boxMaterial = new THREE.MeshBasicMaterial({
+  color: "#FCB500",
+  side: THREE.DoubleSide,
+});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 scene.add(box);
 
 //-create plane grids----------------
-const geometry = new THREE.PlaneGeometry(8, 5);
+const geometry = new THREE.PlaneGeometry(20, 20, 32, 32);
 const material = new THREE.MeshBasicMaterial({
   color: "#373737",
   side: THREE.DoubleSide,
+  flatShading: true,
+  opacity: 0.7,
 });
 const plane = new THREE.Mesh(geometry, material);
 scene.add(plane);
@@ -57,16 +62,24 @@ scene.add(gridHelper);
 // //-----------------------------------------------------orbit control
 function init() {
   const controls = new OrbitControls(camera, renderer.domElement);
+  //---light--------------------------------------------------
+  const light = new THREE.AmbientLight("#fff", 2);
+  scene.add(light);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+  directionalLight.position.set(20, 20, 0);
+  //Set up shadow properties for the light
+  light.shadow.mapSize.width = 400;
+  light.shadow.mapSize.height = 200;
+  light.shadow.camera.near = 0.9;
+  light.shadow.camera.far = 600;
+  const Helper = new THREE.DirectionalLightHelper(directionalLight, 2);
+  scene.add(directionalLight, Helper, light, shadow);
+
+  const shadowHelper = new THREE.cameraHelper(light.shadow);
+  scene.add(shadowHelper);
 }
 
 // //-----------------------------------------------------
-//---light--------------------------------------------------
-const light = new THREE.AmbientLight("#FFFFFF", 1); // soft white light
-scene.add(light);
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(20, 20, 0);
-const Helper = new THREE.DirectionalLightHelper(directionalLight, 2);
-scene.add(directionalLight, Helper, light);
 
 //--function animate
 function animate() {
