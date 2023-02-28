@@ -61,8 +61,8 @@ scene.add(gridHelper);
 
 // //-----------------------------------------------------
 //---light--------------------------------------------------
-// const light = new THREE.AmbientLight("#FFFFFF", 0.5); // soft white light
-// scene.add(light);
+const light = new THREE.AmbientLight("#FFFFFF", 0.5); // soft white light
+scene.add(light);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(0, 2, 2);
 const Helper = new THREE.DirectionalLightHelper(directionalLight, 5);
