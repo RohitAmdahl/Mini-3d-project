@@ -4,8 +4,8 @@ import * as THREE from "https://unpkg.com/three/build/three.module.js";
 
 //--------------------------------------orbit control trying to get it but getting error type error
 // import * as THREE from "../node_modules/three/build/three.js";
-//import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitControls.js";
-//import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+// import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 //--------------------------------------orbit control trying to get it but getting error
 //-------------------importing from node modules but getting type error
 
@@ -56,8 +56,8 @@ plane.rotation.x = -0.5 * Math.PI;
 scene.add(gridHelper);
 // //-----------------------------------------------------orbit control
 
-// const orbit = new OrbitControls(camera, renderer, domElement);
-// orbit.update();
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.update();
 
 // //-----------------------------------------------------
 //---light--------------------------------------------------
@@ -72,8 +72,6 @@ scene.add(directionalLight, Helper);
 function animate() {
   requestAnimationFrame(animate);
 
-  // box.rotation.x += 0.01;
-  // box.rotation.z += 0.02;
   box.rotation.y += 0.01;
   torus.rotation.x += 0.01;
 
