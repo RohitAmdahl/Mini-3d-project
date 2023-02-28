@@ -56,19 +56,17 @@ plane.rotation.x = -0.5 * Math.PI;
 scene.add(gridHelper);
 // //-----------------------------------------------------orbit control
 function init() {
-  controls = new OrbitControls(camera, renderer.domElement);
+  const controls = new OrbitControls(camera, renderer.domElement);
 }
-
-// controls.update();
 
 // //-----------------------------------------------------
 //---light--------------------------------------------------
-const light = new THREE.AmbientLight("#FFFFFF", 0.5); // soft white light
+const light = new THREE.AmbientLight("#FFFFFF", 1); // soft white light
 scene.add(light);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-directionalLight.position.set(0, 2, 2);
-const Helper = new THREE.DirectionalLightHelper(directionalLight, 5);
-scene.add(directionalLight, Helper);
+directionalLight.position.set(20, 20, 0);
+const Helper = new THREE.DirectionalLightHelper(directionalLight, 2);
+scene.add(directionalLight, Helper, light);
 
 //--function animate
 function animate() {
