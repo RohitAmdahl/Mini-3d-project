@@ -67,6 +67,7 @@ function init() {
   scene.add(light);
   const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
   directionalLight.position.set(20, 20, 0);
+  light.castShadow = true;
   //Set up shadow properties for the light
   light.shadow.mapSize.width = 400;
   light.shadow.mapSize.height = 200;
