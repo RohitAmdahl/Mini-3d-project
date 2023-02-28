@@ -1,4 +1,5 @@
-![starting to learn ](https://user-images.githubusercontent.com/91061651/221443323-77c843aa-b259-49df-a1ac-ac5f03da4ce7.jpg)
+![three](https://user-images.githubusercontent.com/91061651/221843778-442ee7ac-21bd-4aac-b82d-0b75c6dd0bb4.jpg)
+
 
 # three.js-3d-project
 -info- project design is changing as i m going forword, but first look of the Design and Direction
